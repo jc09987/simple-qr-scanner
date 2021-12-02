@@ -3,8 +3,10 @@ import { Text, View, StyleSheet, Button, Alert } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import Constants from 'expo-constants';
 
-const host = "192.168.100.162";
-const port = "5000";
+import { HOST, PORT } from '@env';
+
+const host = HOST;
+const port = PORT || 5000;
 interface ScannedCode {
   type: any;
   data: any
